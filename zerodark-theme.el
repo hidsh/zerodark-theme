@@ -248,8 +248,8 @@ The result is cached for one second to avoid hiccups."
    `(highlight ((,class (:background ,highlight :foreground ,default :underline nil))))
    `(region ((,class (:background ,highlight))))
    `(secondary-selection ((,class (:background ,highlight :foreground ,default))))
-   `(isearch ((,class (:background ,orange-light :foreground ,highlight))))
-   `(lazy-highlight ((,class (:background ,grey-dark :foreground ,orange-light))))
+   `(isearch ((,class (:background ,orange-light :foreground ,highlight :undlerline nil))))
+   `(lazy-highlight ((,class (:background ,grey-dark :foreground ,orange-light :underline nil))))
    `(hl-line ((,class (:background ,hl-line :underline unspecified :inherit nil))))
    `(shadow ((,class (:foreground ,comment))))
 

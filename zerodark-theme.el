@@ -199,7 +199,8 @@ The result is cached for one second to avoid hiccups."
 
 
 (let ((class '((class color) (min-colors 89)))
-      (default (if (true-color-p) "#abb2bf" "#afafaf"))
+      ;; (default (if (true-color-p) "#abb2bf" "#afafaf"))
+      (default (if (true-color-p) "#B7BECC" "#afafaf"))
       (light (if (true-color-p) "#ccd4e3" "#d7d7d7"))
       (background (if (true-color-p) "#282c34" "#333333"))
       (background-dark (if (true-color-p) "#24282f" "#222222"))
@@ -219,7 +220,8 @@ The result is cached for one second to avoid hiccups."
       (grey (if (true-color-p) "#cccccc" "#cccccc"))
       (grey-dark (if (true-color-p) "#666666" "#666666"))
       (highlight (if (true-color-p) "#3e4451" "#5f5f5f"))
-      (comment (if (true-color-p) "#687080" "#707070"))
+      ;; (comment (if (true-color-p) "#687080" "#707070"))
+      (comment (if (true-color-p) "#788194" "#707070"))
       (orange (if (true-color-p) "#da8548" "#d7875f"))
       (orange-light (if (true-color-p) "#ddbd78" "#d7af87"))
       (red (if (true-color-p) "#ff6c6b" "#ff5f5f"))
@@ -260,7 +262,8 @@ The result is cached for one second to avoid hiccups."
    `(font-lock-comment-face ((,class (:foreground ,comment :slant italic))))
    `(font-lock-constant-face ((,class (:foreground ,orange :weight bold))))
    `(font-lock-function-name-face ((,class (:foreground ,blue))))
-   `(font-lock-keyword-face ((,class (:foreground ,purple :weight bold))))
+   ;; `(font-lock-keyword-face ((,class (:foreground ,purple :weight bold))))
+   `(font-lock-keyword-face ((,class (:foreground ,purple :weight normal))))
    `(font-lock-string-face ((,class (:foreground ,green))))
    `(font-lock-doc-face ((,class (:foreground ,green-light))))
    `(font-lock-type-face ((,class (:foreground ,blue))))
@@ -303,6 +306,8 @@ The result is cached for one second to avoid hiccups."
    ;; native line numbers (emacs 26)
    `(line-number ((,class (:foreground ,comment :background ,background-darker))))
    `(line-number-current-line ((,class (:foreground ,blue :background ,background-darker))))
+   ;; `(line-number ((,class (:foreground ,comment :background ,background-darker))))
+   ;; `(line-number-current-line ((,class (:foreground ,blue :background ,background-darker))))
 
    ;; eshell
    `(eshell-prompt ((,class (:foreground ,blue :background ,background :weight bold))))
@@ -557,7 +562,8 @@ The result is cached for one second to avoid hiccups."
    `(ediff-odd-diff-C ((,class (:background ,highlight :foreground unspecified))))
 
    ;; ivy
-   `(ivy-current-match ((,class (:background ,background-purple :weight bold :foreground ,purple))))
+   ;; `(ivy-current-match ((,class (:background ,background-purple :weight bold :foreground ,purple))))
+   `(ivy-current-match ((,class (:background ,blue-dark :weight bold))))
    `(ivy-minibuffer-match-face-1 ((,class (:foreground ,orange))))
    `(ivy-minibuffer-match-face-2 ((,class (:foreground ,green))))
    `(ivy-minibuffer-match-face-3 ((,class (:foreground ,green))))

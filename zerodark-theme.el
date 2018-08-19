@@ -258,9 +258,9 @@ The result is cached for one second to avoid hiccups."
    `(match ((,class (:background ,background-green))))
 
    ;; Font lock faces
-   `(font-lock-builtin-face ((,class (:foreground ,blue :weight bold))))
+   `(font-lock-builtin-face ((,class (:foreground ,blue :weight normal))))
    `(font-lock-comment-face ((,class (:foreground ,comment :slant italic))))
-   `(font-lock-constant-face ((,class (:foreground ,orange :weight bold))))
+   `(font-lock-constant-face ((,class (:foreground ,orange :weight normal))))
    `(font-lock-function-name-face ((,class (:foreground ,blue))))
    ;; `(font-lock-keyword-face ((,class (:foreground ,purple :weight bold))))
    `(font-lock-keyword-face ((,class (:foreground ,purple :weight normal))))
@@ -268,7 +268,7 @@ The result is cached for one second to avoid hiccups."
    `(font-lock-doc-face ((,class (:foreground ,green-light))))
    `(font-lock-type-face ((,class (:foreground ,blue))))
    `(font-lock-variable-name-face ((,class (:foreground ,blue))))
-   `(font-lock-warning-face ((,class (:foreground ,red :weight bold :background ,background-red))))
+   `(font-lock-warning-face ((,class (:foreground ,red :weight normal :background ,background-red))))
 
    ;; Mode line faces
    `(mode-line ((,class (:background ,background-blue :height 0.9 :foreground ,blue
@@ -280,9 +280,9 @@ The result is cached for one second to avoid hiccups."
    `(header-line ((,class (:inherit mode-line-inactive))))
 
    ;; error & success
-   `(error ((,class (:foreground ,red :weight bold))))
-   `(warning ((,class (:foreground ,orange :weight bold))))
-   `(success ((,class (:foreground ,green :weight bold))))
+   `(error ((,class (:foreground ,red :weight normal))))
+   `(warning ((,class (:foreground ,orange :weight normal))))
+   `(success ((,class (:foreground ,green :weight normal))))
 
    ;; powerline
    `(powerline-active1 ((,class (:height 0.9 :foreground ,blue :background ,background-darker))))
@@ -295,8 +295,8 @@ The result is cached for one second to avoid hiccups."
    `(org-mode-line-clock ((,class (:background unspecified (:inherit mode-line)))))
 
    ;; Escape and prompt faces
-   `(minibuffer-prompt ((,class (:foreground ,blue :weight bold))))
-   `(escape-glyph ((,class (:foreground ,blue :weight bold))))
+   `(minibuffer-prompt ((,class (:foreground ,blue :weight normal))))
+   `(escape-glyph ((,class (:foreground ,blue :weight normal))))
 
    ;; linum
    `(linum ((,class (:foreground ,comment :background ,background))))
@@ -310,10 +310,10 @@ The result is cached for one second to avoid hiccups."
    ;; `(line-number-current-line ((,class (:foreground ,blue :background ,background-darker))))
 
    ;; eshell
-   `(eshell-prompt ((,class (:foreground ,blue :background ,background :weight bold))))
-   `(eshell-ls-directory ((,class (:foreground ,purple :background ,background :weight bold))))
+   `(eshell-prompt ((,class (:foreground ,blue :background ,background :weight normal))))
+   `(eshell-ls-directory ((,class (:foreground ,purple :background ,background :weight normal))))
    `(eshell-ls-symlink ((,class (:foreground ,orange :background ,background :weight normal))))
-   `(eshell-ls-executable ((,class (:foreground ,green :background ,background :weight bold))))
+   `(eshell-ls-executable ((,class (:foreground ,green :background ,background :weight normal))))
 
    ;; whitespace
    `(whitespace-space ((,class (:background unspecified :foreground ,highlight
@@ -347,28 +347,28 @@ The result is cached for one second to avoid hiccups."
    `(custom-button ((,class (:background ,background-lighter :box (:line-width 2 :style released-button)))))
    `(custom-button-mouse ((,class (:background ,highlight :box (:line-width 2 :style released-button)))))
    `(custom-button-pressed ((,class (:background ,highlight :box (:line-width 2 :style pressed-button)))))
-   `(custom-group-tag ((,class (:foreground ,purple :weight bold :height 1.4))))
-   `(custom-variable-tag ((,class (:foreground ,purple :weight bold))))
+   `(custom-group-tag ((,class (:foreground ,purple :weight normal :height 1.4))))
+   `(custom-variable-tag ((,class (:foreground ,purple :weight normal))))
    `(custom-state ((,class (:foreground ,green))))
 
    ;; compilation
-   `(compilation-info ((,class (:foreground ,purple :weight bold))))
-   `(compilation-warning ((,class (:foreground ,orange :weight bold))))
+   `(compilation-info ((,class (:foreground ,purple :weight normal))))
+   `(compilation-warning ((,class (:foreground ,orange :weight normal))))
    `(compilation-error ((,class (:foreground ,red :weight bold))))
-   `(compilation-line-number ((,class (:foreground ,green :weight bold))))
-   `(compilation-mode-line-exit ((,class (:foreground ,green :weight bold :inverse-video nil))))
-   `(compilation-mode-line-run ((,class (:foreground ,orange :weight bold))))
+   `(compilation-line-number ((,class (:foreground ,green :weight normal))))
+   `(compilation-mode-line-exit ((,class (:foreground ,green :weight normal :inverse-video nil))))
+   `(compilation-mode-line-run ((,class (:foreground ,orange :weight normal))))
    `(compilation-mode-line-fail ((,class (:foreground ,red :weight bold))))
 
    ;; dired
-   `(dired-header ((,class (:foreground ,blue :background ,background-blue :weight bold))))
-   `(dired-directory ((,class (:foreground ,purple :weight bold))))
+   `(dired-header ((,class (:foreground ,blue :background ,background-blue :weight normal))))
+   `(dired-directory ((,class (:foreground ,purple :weight normal))))
 
    ;; diff
    `(diff-removed ((,class (:background ,background-red :foreground ,red))))
    `(diff-added ((,class (:background ,background-green :foreground ,green))))
-   `(diff-hunk-header ((,class (:background ,background-blue :weight bold :foreground ,blue))))
-   `(diff-file-header ((,class (:weight bold))))
+   `(diff-hunk-header ((,class (:background ,background-blue :weight normal :foreground ,blue))))
+   `(diff-file-header ((,class (:weight normal))))
    `(diff-header ((,class (:background ,background :foreground ,blue))))
    `(diff-context ((,class (:foreground ,default))))
    `(diff-refine-added ((,class (:foreground ,green :background ,bright-background-green))))
@@ -384,8 +384,8 @@ The result is cached for one second to avoid hiccups."
 
    ;; magit
    `(magit-diff-context-highlight ((,class (:background ,background-darker))))
-   `(magit-diff-file-heading ((,class (:weight bold :foreground ,blue))))
-   `(magit-diff-file-heading-highlight ((,class (:weight bold :foreground ,blue :background ,background-blue))))
+   `(magit-diff-file-heading ((,class (:weight normal :foreground ,blue))))
+   `(magit-diff-file-heading-highlight ((,class (:weight normal :foreground ,blue :background ,background-blue))))
    `(magit-diff-removed-highlight ((,class (:inherit diff-removed))))
    `(magit-diff-removed ((,class (:inherit diff-removed))))
    `(magit-diff-added-highlight ((,class (:inherit diff-added))))
@@ -395,20 +395,20 @@ The result is cached for one second to avoid hiccups."
    `(magit-diff-hunk-heading-highlight ((,class (:background ,blue-dark))))
    `(magit-diff-hunk-heading ((,class (:background ,background-lighter))))
 
-   `(magit-process-ok ((,class (:foreground ,green :weight bold))))
+   `(magit-process-ok ((,class (:foreground ,green :weight normal))))
 
    `(magit-section-highlight ((,class (:background ,background-darker))))
-   `(magit-section-heading ((,class (:foreground ,grey :weight bold))))
+   `(magit-section-heading ((,class (:foreground ,grey :weight normal))))
    `(magit-branch-current ((,class (:foreground ,blue :background ,background-darker :box 1))))
    `(magit-branch-local ((,class (:foreground ,purple :background ,background-darker :box 1))))
    `(magit-branch-remote ((,class (:foreground ,green :background ,background-darker :box 1))))
 
-   `(magit-reflog-reset ((,class (:background ,background-red :foreground ,red :weight bold))))
-   `(magit-reflog-amend ((,class (:background ,background-blue :foreground ,blue :weight bold))))
-   `(magit-reflog-rebase ((,class (:background ,background-blue :foreground ,blue :weight bold))))
-   `(magit-reflog-commit ((,class (:background ,background-green :foreground ,green :weight bold))))
-   `(magit-reflog-checkout ((,class (:background ,background-orange :foreground ,orange :weight bold))))
-   `(magit-reflog-cherry-pick ((,class (:background ,background-purple :foreground ,purple :weight bold))))
+   `(magit-reflog-reset ((,class (:background ,background-red :foreground ,red :weight normal))))
+   `(magit-reflog-amend ((,class (:background ,background-blue :foreground ,blue :weight normal))))
+   `(magit-reflog-rebase ((,class (:background ,background-blue :foreground ,blue :weight normal))))
+   `(magit-reflog-commit ((,class (:background ,background-green :foreground ,green :weight normal))))
+   `(magit-reflog-checkout ((,class (:background ,background-orange :foreground ,orange :weight normal))))
+   `(magit-reflog-cherry-pick ((,class (:background ,background-purple :foreground ,purple :weight normal))))
 
    `(magit-bisect-bad ((,class (:background ,background-red :foreground ,red :box 1))))
    `(magit-bisect-good ((,class (:background ,background-blue :foreground ,blue :box 1))))
@@ -418,42 +418,42 @@ The result is cached for one second to avoid hiccups."
 
    `(magit-blame-heading ((,class (:foreground ,green :background ,background-green :box 1))))
 
-   `(git-commit-summary ((,class (:weight bold))))
+   `(git-commit-summary ((,class (:weight normal))))
 
-   `(magit-tag ((,class (:foreground ,purple :weight bold :box 1 :background "#202020"))))
-   `(magit-sequence-part ((,class (:foreground ,orange :weight bold))))
-   `(magit-sequence-head ((,class (:foreground ,green :weight bold))))
+   `(magit-tag ((,class (:foreground ,purple :weight normal :box 1 :background "#202020"))))
+   `(magit-sequence-part ((,class (:foreground ,orange :weight normal))))
+   `(magit-sequence-head ((,class (:foreground ,green :weight normal))))
 
    ;; Message faces
-   `(message-header-name ((,class (:foreground ,blue :weight bold))))
+   `(message-header-name ((,class (:foreground ,blue :weight normal))))
    `(message-header-cc ((,class (:foreground ,purple))))
    `(message-header-other ((,class (:foreground ,purple))))
    `(message-header-subject ((,class (:foreground ,green))))
    `(message-header-to ((,class (:foreground ,purple))))
    `(message-cited-text ((,class (:foreground ,comment))))
-   `(message-separator ((,class (:foreground ,red :weight bold))))
+   `(message-separator ((,class (:foreground ,red :weight normal))))
 
    ;; ido faces
-   `(ido-first-match ((,class (:foreground ,purple :weight bold))))
-   `(ido-only-match ((,class (:foreground ,purple :weight bold))))
+   `(ido-first-match ((,class (:foreground ,purple :weight normal))))
+   `(ido-only-match ((,class (:foreground ,purple :weight normal))))
    `(ido-subdir ((,class (:foreground ,blue))))
 
    ;; notmuch
    `(notmuch-message-summary-face ((,class (:background ,highlight :box (:line-width 2 :color ,background)))))
-   `(notmuch-search-count ((,class (:foreground ,red :weight bold))))
+   `(notmuch-search-count ((,class (:foreground ,red :weight normal))))
    `(notmuch-search-matching-authors ((,class (:foreground ,comment))))
    `(notmuch-search-subject ((,class (:foreground ,default))))
-   `(notmuch-search-unread-face ((,class (:weight bold))))
+   `(notmuch-search-unread-face ((,class (:weight normal))))
    `(notmuch-search-date ((,class (:foreground ,purple))))
    `(notmuch-crypto-part-header ((,class (:foreground ,blue))))
    `(notmuch-crypto-decryption ((,class (:foreground ,purple))))
    `(notmuch-crypto-signature-unknown ((,class (:foreground ,red))))
-   `(notmuch-crypto-signature-good ((,class (:background ,blue :foreground ,background :weight bold))))
-   `(notmuch-crypto-signature-good-key ((,class (:background ,blue :foreground ,background :weight bold))))
-   `(notmuch-crypto-signature-bad ((,class (:background ,red :foreground ,background :weight bold))))
-   `(notmuch-tag-face ((,class (:foreground ,green :weight bold))))
+   `(notmuch-crypto-signature-good ((,class (:background ,blue :foreground ,background :weight normal))))
+   `(notmuch-crypto-signature-good-key ((,class (:background ,blue :foreground ,background :weight normal))))
+   `(notmuch-crypto-signature-bad ((,class (:background ,red :foreground ,background :weight normal))))
+   `(notmuch-tag-face ((,class (:foreground ,green :weight normal))))
    `(notmuch-tree-match-author-face ((,class (:foreground ,purple))))
-   `(notmuch-tree-match-tag-face ((,class (:foreground ,green :weight bold))))
+   `(notmuch-tree-match-tag-face ((,class (:foreground ,green :weight normal))))
 
    ;; company
    `(company-preview ((,class (:background ,background-darker :foreground ,default))))
@@ -462,15 +462,15 @@ The result is cached for one second to avoid hiccups."
    `(company-tooltip ((,class (:background ,background-darker :foreground ,default))))
    `(company-scrollbar-bg ((,class (:background ,background-darker))))
    `(company-scrollbar-fg ((,class (:background ,background-blue))))
-   `(company-tooltip-common ((,class (:foreground ,purple :weight bold :background ,background-darker))))
-   `(company-tooltip-annotation ((,class (:foreground ,blue :weight bold :background ,background-blue))))
-   `(company-tooltip-common-selection ((,class (:foreground ,purple :background ,background-lighter :weight bold))))
+   `(company-tooltip-common ((,class (:foreground ,purple :weight normal :background ,background-darker))))
+   `(company-tooltip-annotation ((,class (:foreground ,blue :weight normal :background ,background-blue))))
+   `(company-tooltip-common-selection ((,class (:foreground ,purple :background ,background-lighter :weight normal))))
    `(company-tooltip-selection ((,class (:foreground ,default :background ,background-lighter))))
    `(company-tooltip-mouse ((,class (:foreground ,default :background ,background-lighter))))
 
    ;; web-mode
-   `(web-mode-html-tag-face ((,class (:foreground ,purple :weight bold))))
-   `(web-mode-symbol-face ((,class (:foreground ,red :weight bold))))
+   `(web-mode-html-tag-face ((,class (:foreground ,purple :weight normal))))
+   `(web-mode-symbol-face ((,class (:foreground ,red :weight normal))))
 
    ;; js2-mode
    `(js2-function-param ((,class (:foreground ,blue))))
@@ -480,42 +480,45 @@ The result is cached for one second to avoid hiccups."
 
    ;; flycheck
    `(flycheck-fringe-error ((,class (:foreground ,red :background ,background-red :weight bold :inverse-video t))))
-   `(flycheck-fringe-warning ((,class (:background ,background-orange :foreground ,orange :weight bold :inverse-video t))))
-   `(flycheck-fringe-info ((,class (:background ,background-blue :foreground ,blue :weight bold :inverse-video t))))
+   `(flycheck-fringe-warning ((,class (:background ,background-orange :foreground ,orange :weight normal :inverse-video t))))
+   `(flycheck-fringe-info ((,class (:background ,background-blue :foreground ,blue :weight normal :inverse-video t))))
    `(flycheck-warning ((,class (:underline (:color ,red :style wave)))))
    `(flycheck-error ((,class (:underline (:color ,red :style wave)))))
 
    ;; FIC
-   `(font-lock-fic-face ((,class (:foreground ,background :background ,red :weight bold))))
+   `(font-lock-fic-face ((,class (:foreground ,background :background ,red :weight normal))))
 
+   ;; org-mode
+   `(org-document-title ((,class (:foreground ,orange :weight normal))))
+   
    ;; org-mode todo
    `(org-hide ((,class (:foreground ,background))))
-   `(org-todo ((,class (:foreground ,red :background ,background-red :weight bold))))
-   `(org-done ((,class (:foreground ,blue :background ,background-blue :weight bold))))
+   `(org-todo ((,class (:foreground ,red :background ,background-red :weight normal))))
+   `(org-done ((,class (:foreground ,blue :background ,background-blue :weight normal))))
    `(org-date ((,class (:background ,background-lighter))))
    `(org-scheduled-previously ((,class (:foreground ,red))))
    `(org-scheduled ((,class (:foreground ,default))))
    `(org-upcoming-deadline ((,class (:foreground ,orange))))
    `(org-headline-done ((,class (:foreground ,comment))))
-   `(outline-1 ((,class (:foreground ,blue :weight bold))))
-   `(outline-2 ((,class (:foreground ,purple :weight bold))))
-   `(outline-3 ((,class (:foreground ,peach :weight bold))))
-   `(outline-4 ((,class (:foreground ,green-light :weight bold))))
-   `(outline-5 ((,class (:foreground ,blue :weight bold))))
-   `(outline-6 ((,class (:foreground ,purple :weight bold))))
-   `(outline-7 ((,class (:foreground ,peach :weight bold))))
-   `(outline-8 ((,class (:foreground ,green-light :weight bold))))
+   `(outline-1 ((,class (:foreground ,blue :weight normal))))
+   `(outline-2 ((,class (:foreground ,purple :weight normal))))
+   `(outline-3 ((,class (:foreground ,peach :weight normal))))
+   `(outline-4 ((,class (:foreground ,green-light :weight normal))))
+   `(outline-5 ((,class (:foreground ,blue :weight normal))))
+   `(outline-6 ((,class (:foreground ,purple :weight normal))))
+   `(outline-7 ((,class (:foreground ,peach :weight normal))))
+   `(outline-8 ((,class (:foreground ,green-light :weight normal))))
    `(org-column-title ((,class (:foreground unspecified :background unspecified))))
-   `(org-agenda-date ((,class (:foreground ,purple :weight bold))))
-   `(org-agenda-date-today ((,class (:foreground ,blue :weight bold :background ,background-blue :box 1))))
-   `(org-agenda-structure ((,class (:foreground ,blue :weight bold))))
-   `(org-scheduled-today ((,class (:foreground ,default :weight bold))))
+   `(org-agenda-date ((,class (:foreground ,purple :weight normal))))
+   `(org-agenda-date-today ((,class (:foreground ,blue :weight normal :background ,background-blue :box 1))))
+   `(org-agenda-structure ((,class (:foreground ,blue :weight normal))))
+   `(org-scheduled-today ((,class (:foreground ,default :weight normal))))
    `(org-agenda-done ((,class (:foreground ,comment))))
    `(org-time-grid ((,class (:foreground ,comment))))
 
    ;; org columns
    `(org-column ((,class (:background ,background-darker))))
-   `(org-column-title ((,class (:background ,background-blue :foreground ,blue :weight bold))))
+   `(org-column-title ((,class (:background ,background-blue :foreground ,blue :weight normal))))
 
    ;; org blocks
    `(org-block-begin-line ((,class (:background ,background-green :foreground ,green-light :height 0.9))))
@@ -527,26 +530,26 @@ The result is cached for one second to avoid hiccups."
    `(org-drill-visible-cloze-hint-face ((,class (:background ,green :foreground ,background-green))))
 
    ;; Gnus faces -- from wombat, feel free to improve :)
-   `(gnus-group-news-1 ((,class (:weight bold :foreground "#95e454"))))
+   `(gnus-group-news-1 ((,class (:weight normal :foreground "#95e454"))))
    `(gnus-group-news-1-low ((,class (:foreground "#95e454"))))
-   `(gnus-group-news-2 ((,class (:weight bold :foreground "#cae682"))))
+   `(gnus-group-news-2 ((,class (:weight normal :foreground "#cae682"))))
    `(gnus-group-news-2-low ((,class (:foreground "#cae682"))))
-   `(gnus-group-news-3 ((,class (:weight bold :foreground "#ccaa8f"))))
+   `(gnus-group-news-3 ((,class (:weight normal :foreground "#ccaa8f"))))
    `(gnus-group-news-3-low ((,class (:foreground "#ccaa8f"))))
-   `(gnus-group-news-4 ((,class (:weight bold :foreground "#99968b"))))
+   `(gnus-group-news-4 ((,class (:weight normal :foreground "#99968b"))))
    `(gnus-group-news-4-low ((,class (:foreground "#99968b"))))
-   `(gnus-group-news-5 ((,class (:weight bold :foreground "#cae682"))))
+   `(gnus-group-news-5 ((,class (:weight normal :foreground "#cae682"))))
    `(gnus-group-news-5-low ((,class (:foreground "#cae682"))))
    `(gnus-group-news-low ((,class (:foreground "#99968b"))))
-   `(gnus-group-mail-1 ((,class (:weight bold :foreground "#95e454"))))
+   `(gnus-group-mail-1 ((,class (:weight normal :foreground "#95e454"))))
    `(gnus-group-mail-1-low ((,class (:foreground "#95e454"))))
-   `(gnus-group-mail-2 ((,class (:weight bold :foreground "#cae682"))))
+   `(gnus-group-mail-2 ((,class (:weight normal :foreground "#cae682"))))
    `(gnus-group-mail-2-low ((,class (:foreground "#cae682"))))
-   `(gnus-group-mail-3 ((,class (:weight bold :foreground "#ccaa8f"))))
+   `(gnus-group-mail-3 ((,class (:weight normal :foreground "#ccaa8f"))))
    `(gnus-group-mail-3-low ((,class (:foreground "#ccaa8f"))))
    `(gnus-group-mail-low ((,class (:foreground "#99968b"))))
    `(gnus-header-content ((,class (:foreground "#8ac6f2"))))
-   `(gnus-header-from ((,class (:weight bold :foreground "#95e454"))))
+   `(gnus-header-from ((,class (:weight normal :foreground "#95e454"))))
    `(gnus-header-subject ((,class (:foreground "#cae682"))))
    `(gnus-header-name ((,class (:foreground "#8ac6f2"))))
    `(gnus-header-newsgroups ((,class (:foreground "#cae682"))))
@@ -575,16 +578,16 @@ The result is cached for one second to avoid hiccups."
    `(ivy-highlight-face ((,class (:foreground ,blue :weight bold))))
 
    ;; helm
-   `(helm-candidate-number ((,class (:weight bold))))
-   `(helm-header-line-left-margin ((,class (:weight bold :foreground ,red))))
-   `(helm-source-header ((,class (:height 1.2 :weight bold :foreground ,blue :background ,background-blue))))
+   `(helm-candidate-number ((,class (:weight normal))))
+   `(helm-header-line-left-margin ((,class (:weight normal :foreground ,red))))
+   `(helm-source-header ((,class (:height 1.2 :weight normal :foreground ,blue :background ,background-blue))))
    `(helm-selection ((,class (:background ,background-lighter))))
    `(helm-match ((,class (:foreground ,purple :background ,background-purple :weight bold))))
    `(helm-match-item ((,class (:inherit isearch))))
-   `(helm-M-x-key ((,class (:foreground ,blue :weight bold :background ,background-blue))))
-   `(helm-visible-mark ((,class (:weight bold :foreground ,orange :background ,background-darker))))
-   `(helm-prefarg ((,class (:weight bold :foreground ,red :background ,background-red))))
-   `(helm-separator ((,class (:weight bold :foreground , blue))))
+   `(helm-M-x-key ((,class (:foreground ,blue :weight normal :background ,background-blue))))
+   `(helm-visible-mark ((,class (:weight normal :foreground ,orange :background ,background-darker))))
+   `(helm-prefarg ((,class (:weight normal :foreground ,red :background ,background-red))))
+   `(helm-separator ((,class (:weight normal :foreground , blue))))
 
    `(helm-grep-file ((,class ())))
    `(helm-grep-finish ((,class (:foreground ,green))))
@@ -598,20 +601,20 @@ The result is cached for one second to avoid hiccups."
    `(helm-buffer-file ((,class ())))
    `(helm-buffer-process ((,class (:foreground ,purple))))
    `(helm-buffer-size ((,class (:foreground ,blue))))
-   `(helm-buffer-saved-out ((,class (:foreground ,red :weight bold))))
+   `(helm-buffer-saved-out ((,class (:foreground ,red :weight normal))))
 
    `(helm-ff-directory ((,class (:foreground ,purple))))
    `(helm-ff-dotted-directory ((,class (:foreground ,purple))))
-   `(helm-ff-prefix ((,class (:weight bold :foreground ,red))))
+   `(helm-ff-prefix ((,class (:weight normal :foreground ,red))))
    `(helm-ff-file ((,class ())))
-   `(helm-ff-executable ((,class (:foreground ,green :weight bold :background ,background-green))))
+   `(helm-ff-executable ((,class (:foreground ,green :weight normal :background ,background-green))))
    `(helm-ff-symlink ((,class (:foreground ,orange))))
-   `(helm-ff-invalid-symlink ((,class (:foreground ,red :weight bold :background ,background-red))))
-   `(helm-history-deleted ((,class (:foreground ,red :weight bold :background ,background-red))))
+   `(helm-ff-invalid-symlink ((,class (:foreground ,red :weight normal :background ,background-red))))
+   `(helm-history-deleted ((,class (:foreground ,red :weight normal :background ,background-red))))
 
    `(helm-swoop-target-line-face ((,class (:foreground ,comment :background ,background-lighter))))
-   `(helm-swoop-target-line-block-face ((,class (:foreground ,comment :background ,background-lighter :weight bold))))
-   `(helm-swoop-target-word-face ((,class (:foreground ,purple :background ,background-purple :weight bold))))
+   `(helm-swoop-target-line-block-face ((,class (:foreground ,comment :background ,background-lighter :weight normal))))
+   `(helm-swoop-target-word-face ((,class (:foreground ,purple :background ,background-purple :weight normal))))
    `(helm-swoop-line-number-face ((,class (:foreground ,comment))))
 
    ;; visible mark
@@ -628,8 +631,8 @@ The result is cached for one second to avoid hiccups."
    `(ledger-font-report-clickable-face ((,class (:foreground ,blue))))
    `(ledger-font-posting-amount-face ((,class (:foreground ,purple))))
    `(ledger-font-posting-date-face ((,class (:foreground ,blue :background ,background-blue :box 1))))
-   `(ledger-font-payee-uncleared-face ((,class (:foreground ,default :weight bold))))
-   `(ledger-font-payee-cleared-face ((,class (:foreground ,green :weight bold))))
+   `(ledger-font-payee-uncleared-face ((,class (:foreground ,default :weight normal))))
+   `(ledger-font-payee-cleared-face ((,class (:foreground ,green :weight normal))))
    `(ledger-font-posting-account-face ((,class (:foreground ,default))))
    `(ledger-font-posting-account-pending-face ((,class (:foreground ,red))))
    `(ledger-font-xact-highlight-face ((,class (:background ,background-darker))))
@@ -658,26 +661,26 @@ The result is cached for one second to avoid hiccups."
    `(term-default-fg-color ((,class (:inherit term-color-white))))
    `(term-default-bg-color ((,class (:inherit term-color-black))))
 
-   `(sh-heredoc ((,class (:foreground ,orange :weight bold))))
+   `(sh-heredoc ((,class (:foreground ,orange :weight normal))))
 
    `(avy-lead-face ((,class :foreground ,red :background ,background-red)))
    `(avy-lead-face-0 ((,class :foreground ,purple :background ,background-purple)))
    `(avy-lead-face-1 ((,class :foreground ,blue :background ,background-blue)))
    `(avy-lead-face-2 ((,class :foreground ,green :background ,background-green)))
 
-   `(erc-nick-default-face ((,class :foreground ,blue :background ,background-blue :weight bold)))
-   `(erc-current-nick-face ((,class :foreground ,red :weight bold :background ,background-red)))
-   `(erc-my-nick-face ((,class :foreground ,red :weight bold :background ,background-red)))
+   `(erc-nick-default-face ((,class :foreground ,blue :background ,background-blue :weight normal)))
+   `(erc-current-nick-face ((,class :foreground ,red :weight normal :background ,background-red)))
+   `(erc-my-nick-face ((,class :foreground ,red :weight normal :background ,background-red)))
    `(erc-notice-face ((,class :foreground ,comment)))
-   `(erc-input-face ((,class :foreground ,default :weight bold)))
-   `(erc-prompt-face ((,class :foreground ,purple :background ,background-purple :weight bold :box 1)))
-   `(erc-timestamp-face ((,class :foreground ,purple :weight bold)))
+   `(erc-input-face ((,class :foreground ,default :weight normal)))
+   `(erc-prompt-face ((,class :foreground ,purple :background ,background-purple :weight normal :box 1)))
+   `(erc-timestamp-face ((,class :foreground ,purple :weight normal)))
 
    ;; slack
-   `(slack-message-output-header ((,class :foreground ,blue :background ,background-blue :weight bold)))
+   `(slack-message-output-header ((,class :foreground ,blue :background ,background-blue :weight normal)))
 
-   `(hydra-face-red ((,class :foreground ,red :weight bold)))
-   `(hydra-face-blue ((,class :foreground ,blue :weight bold)))
+   `(hydra-face-red ((,class :foreground ,red :weight normal)))
+   `(hydra-face-blue ((,class :foreground ,blue :weight normal)))
 
    ;; elfeed
    `(elfeed-search-date-face ((,class (:foreground ,blue))))
@@ -688,13 +691,13 @@ The result is cached for one second to avoid hiccups."
    ;; wgrep
    `(wgrep-face ((,class (:foreground ,orange))))
    `(wgrep-reject-face ((,class (:foreground ,red :weight bold :background ,background-red))))
-   `(wgrep-done-face ((,class (:foreground ,blue :weight bold))))
+   `(wgrep-done-face ((,class (:foreground ,blue :weight normal))))
 
    ;; AucTeX
    `(font-latex-math-face ((,class :foreground ,green-light)))
    `(font-latex-sectioning-5-face ((,class :foreground ,blue)))
    `(font-latex-string-face ((,class :inherit font-lock-string-face)))
-   `(font-latex-bold-face ((,class :foreground ,green :weight bold)))
+   `(font-latex-bold-face ((,class :foreground ,green :weight normal)))
    `(font-latex-italic-face ((,class :foreground ,green :slant italic)))
    `(font-latex-warning-face ((,class :inherit warning)))
 
@@ -708,24 +711,24 @@ The result is cached for one second to avoid hiccups."
    `(anzu-mode-line ((,class :inherit mode-line :weight bold)))
 
    ;; jabber.el
-   `(jabber-roster-user-online ((,class :foreground ,blue :weight bold)))
-   `(jabber-roster-user-error ((,class :foreground ,red :background ,background-red :weight bold)))
+   `(jabber-roster-user-online ((,class :foreground ,blue :weight normal)))
+   `(jabber-roster-user-error ((,class :foreground ,red :background ,background-red :weight normal)))
    `(jabber-rare-time-face ((,class :foreground ,comment)))
-   `(jabber-chat-prompt-local ((,class :foreground ,purple :background ,background-purple :weight bold)))
-   `(jabber-chat-prompt-foreign ((,class :foreground ,green :background ,background-green :weight bold)))
-   `(jabber-activity-personal-face ((,class :foreground ,red :background ,background-red :weight bold)))
+   `(jabber-chat-prompt-local ((,class :foreground ,purple :background ,background-purple :weight normal)))
+   `(jabber-chat-prompt-foreign ((,class :foreground ,green :background ,background-green :weight normal)))
+   `(jabber-activity-personal-face ((,class :foreground ,red :background ,background-red :weight normal)))
    `(jabber-roster-user-away ((,class :foreground ,orange)))
    `(jabber-roster-user-xa ((,class :foreground ,orange)))
 
    ;; ace-window
-   `(aw-leading-char-face ((,class :foreground ,red :weight bold)))
+   `(aw-leading-char-face ((,class :foreground ,red :weight normal)))
    `(aw-background-face ((,class :foreground ,comment)))
 
    ;; paren-face.el
    `(parenthesis ((,class (:foreground ,comment))))
 
    ;; rainbow-delimiters
-   `(rainbow-delimiters-mismatched-face ((,class :foreground ,red :weight bold :background ,background-red)))
+   `(rainbow-delimiters-mismatched-face ((,class :foreground ,red :weight normal :background ,background-red)))
    `(rainbow-delimiters-unmatched-face ((,class :foreground ,red :weight bold :background ,background-red)))
 
    ;; makefile
@@ -734,8 +737,8 @@ The result is cached for one second to avoid hiccups."
    ;; epa
    `(epa-validity-high ((,class (:foreground ,green))))
    `(epa-validity-low ((,class (:foreground ,default))))
-   `(epa-validity-disabled ((,class (:foreground ,red :weight bold :background ,background-red))))
-   `(epa-field-name ((,class (:foreground ,purple :weight bold))))
+   `(epa-validity-disabled ((,class (:foreground ,red :weight normal :background ,background-red))))
+   `(epa-field-name ((,class (:foreground ,purple :weight normal))))
    `(epa-field-body ((,class (:foreground ,orange))))
 
    ;; tabbar
@@ -748,12 +751,12 @@ The result is cached for one second to avoid hiccups."
    `(tabbar-unselected ((,class (:inherit tabbar-default :slant italic :weight semi-bold))))
 
    ;; markup-face
-   `(markup-title-0-face ((,class (:foreground ,blue :weight bold :underline t))))
-   `(markup-title-1-face ((,class (:foreground ,purple :weight bold :underline t))))
-   `(markup-title-2-face ((,class (:foreground ,peach :weight bold :underline t))))
-   `(markup-title-3-face ((,class (:foreground ,green-light :weight bold :underline t))))
-   `(markup-title-4-face ((,class (:foreground ,blue :weight bold :underline t))))
-   `(markup-title-5-face ((,class (:foreground ,purple :weight bold :underline t))))
+   `(markup-title-0-face ((,class (:foreground ,blue :weight normal :underline t))))
+   `(markup-title-1-face ((,class (:foreground ,purple :weight normal :underline t))))
+   `(markup-title-2-face ((,class (:foreground ,peach :weight normal :underline t))))
+   `(markup-title-3-face ((,class (:foreground ,green-light :weight normal :underline t))))
+   `(markup-title-4-face ((,class (:foreground ,blue :weight normal :underline t))))
+   `(markup-title-5-face ((,class (:foreground ,purple :weight normal :underline t))))
    `(markup-error-face ((,class (:foreground ,red :background ,background-red :weight bold))))
    `(markup-gen-face ((,class (:foreground ,blue))))
    `(markup-typewriter-face ((,class (:inherit shadow))))

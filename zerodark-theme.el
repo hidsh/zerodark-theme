@@ -232,6 +232,10 @@ The result is cached for one second to avoid hiccups."
       (green (if (true-color-p) "#98be65" "#87af5f"))
       (green-light (if (true-color-p) "#9eac8c" "#afaf87"))
       (peach "PeachPuff3")
+      (turquoise "#38C4B6")
+      ;; (turquoise-dark "#68AAAB")
+      (turquoise-dark "#325152")
+      ;; (turquoise-dark "#2B877E")
       (diff-added-background (if (true-color-p) "#284437" "#284437"))
       (diff-added-refined-background (if (true-color-p) "#1e8967" "#1e8967"))
       (diff-removed-background (if (true-color-p) "#583333" "#580000"))
@@ -262,13 +266,15 @@ The result is cached for one second to avoid hiccups."
    `(font-lock-comment-face ((,class (:foreground ,comment :slant italic))))
    `(font-lock-constant-face ((,class (:foreground ,orange :weight normal))))
    `(font-lock-function-name-face ((,class (:foreground ,blue))))
-   ;; `(font-lock-keyword-face ((,class (:foreground ,purple :weight bold))))
    `(font-lock-keyword-face ((,class (:foreground ,purple :weight normal))))
    `(font-lock-string-face ((,class (:foreground ,green))))
    `(font-lock-doc-face ((,class (:foreground ,green-light))))
-   `(font-lock-type-face ((,class (:foreground ,blue))))
+   `(font-lock-type-face ((,class (:foreground ,turquoise))))
    `(font-lock-variable-name-face ((,class (:foreground ,blue))))
-   `(font-lock-warning-face ((,class (:foreground ,red :weight normal :background ,background-red))))
+   ;; `(font-lock-preprocessor-face ((,class (:foreground ,blue :background ,background-blue))))
+   `(font-lock-preprocessor-face ((,class (:foreground ,default :weight bold))))
+   `(font-lock-negation-char-face ((,class (:foreground ,blue :weight bold))))
+   `(font-lock-warning-face ((,class (:foreground ,red :weight bold :background ,background-red))))
 
    ;; Mode line faces
    `(mode-line ((,class (:background ,background-blue :height 0.9 :foreground ,blue
@@ -568,10 +574,10 @@ The result is cached for one second to avoid hiccups."
    ;; `(ivy-current-match ((,class (:background ,background-purple :weight bold :foreground ,purple))))
    `(ivy-current-match ((,class (:background ,blue-dark :weight bold))))
    ;; `(ivy-minibuffer-match-face-1 ((,class (:foreground ,orange))))
-   `(ivy-minibuffer-match-face-1 ((,class (:background ,blue-dark :weight bold))))
-   `(ivy-minibuffer-match-face-2 ((,class (:background ,blue-dark :weight bold))))
-   `(ivy-minibuffer-match-face-3 ((,class (:background ,blue-dark :weight bold))))
-   `(ivy-minibuffer-match-face-4 ((,class (:background ,blue-dark :weight bold))))
+   `(ivy-minibuffer-match-face-1 ((,class (:background ,turquoise-dark :weight bold))))
+   `(ivy-minibuffer-match-face-2 ((,class (:background ,turquoise-dark :weight bold))))
+   `(ivy-minibuffer-match-face-3 ((,class (:background ,turquoise-dark :weight bold))))
+   `(ivy-minibuffer-match-face-4 ((,class (:background ,turquoise-dark :weight bold))))
    `(ivy-match-required-face ((,class (:foreground ,red :background ,background-red :weight bold))))
    `(ivy-modified-buffer ((,class (:foreground ,red))))
    `(ivy-remote ((,class (:foreground ,blue))))
@@ -770,6 +776,9 @@ The result is cached for one second to avoid hiccups."
    ;; Elbank
    `(elbank-progressbar-fill-face ((,class (:background ,diff-added-refined-background :weight bold))))
    `(elbank-progressbar-overflow-face ((,class (:background ,diff-removed-refined-background :weight bold))))
+
+   ;; neo-tree
+   `(neo-root-dir-face ((,class (:foreground ,orange :weight normal))))
    )
 
   (custom-theme-set-variables

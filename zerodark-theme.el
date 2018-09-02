@@ -282,9 +282,12 @@ The result is cached for one second to avoid hiccups."
    `(mode-line ((,class (:background ,background-blue :height 0.9 :foreground ,blue
                                      :box ,(when zerodark-use-paddings-in-mode-line
                                              (list :line-width 6 :color background-blue))))))
-   `(mode-line-inactive ((,class (:background ,background-darker :height 0.9 :foreground ,default
-                                              :box ,(when zerodark-use-paddings-in-mode-line
-                                                      (list :line-width 6 :color background-darker))))))
+   ;; `(mode-line-inactive ((,class (:background ,background-darker :height 0.9 :foreground ,default
+   ;;                                            :box ,(when zerodark-use-paddings-in-mode-line
+   ;;                                                    (list :line-width 6 :color background-darker))))))
+;   `(mode-line-inactive ((,class (:background ,(face-background ,hiwin-face) :height 0.9 :foreground ,default
+;                                              :box ,(when zerodark-use-paddings-in-mode-line
+;                                                      (list :line-width 6 :color background-darker))))))
    `(header-line ((,class (:inherit mode-line-inactive))))
 
    ;; error & success
@@ -317,6 +320,9 @@ The result is cached for one second to avoid hiccups."
    ;; `(line-number ((,class (:foreground ,comment :background ,background-darker))))
    ;; `(line-number-current-line ((,class (:foreground ,blue :background ,background-darker))))
 
+   ;; hiwin
+   `(hiwin-face ((,class (:background "#313640"))))
+   
    ;; eshell
    `(eshell-prompt ((,class (:foreground ,blue :background ,background :weight normal))))
    `(eshell-ls-directory ((,class (:foreground ,purple :background ,background :weight normal))))

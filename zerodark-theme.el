@@ -274,7 +274,7 @@ The result is cached for one second to avoid hiccups."
    `(font-lock-type-face ((,class (:foreground ,green))))
    `(font-lock-variable-name-face ((,class (:foreground ,blue))))
    ;; `(font-lock-preprocessor-face ((,class (:foreground ,blue :background ,background-blue))))
-   `(font-lock-preprocessor-face ((,class (:foreground ,default :weight bold))))
+   `(font-lock-preprocessor-face ((,class (:foreground ,orange :weight bold))))
    `(font-lock-negation-char-face ((,class (:foreground ,blue :weight bold))))
    `(font-lock-warning-face ((,class (:foreground ,red :weight bold :background ,background-red))))
 

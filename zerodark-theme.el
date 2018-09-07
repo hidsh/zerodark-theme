@@ -69,7 +69,7 @@
                  (const :tag "Do not display any version control information" nil)))
 
 (defface zerodark-ro-face
-  '((t :foreground "#0088CC" :weight bold))
+  '((t :foreground "#ff6c6b" :weight bold))
   "Face for read-only buffer in the mode-line.")
 
 (defface zerodark-modified-face
@@ -109,30 +109,44 @@
   "Mode line construct for displaying the position in the buffer.")
 
 (defvar zerodark-modeline-modified '(:eval (if (buffer-modified-p (current-buffer))
-                                               (all-the-icons-faicon "floppy-o"
+                                               (all-the-icons-faicon "pencil"
                                                                      :height 0.9
-                                                                     :v-adjust 0
+                                                                     :v-adjust -0.05
                                                                      :face (if (zerodark--active-window-p)
                                                                                'zerodark-modified-face
                                                                              'mode-line-inactive))
                                              (all-the-icons-faicon "check"
-                                                                   :height 0.9
-                                                                   :v-adjust 0
+                                                                   :height 1.1
+                                                                   :v-adjust -0.05
                                                                    :face (if (zerodark--active-window-p)
-                                                                             'zerodark-not-modified-face
+                                                                             'mode-line
                                                                            'mode-line-inactive)))))
 
+;; (defvar zerodark-modeline-ro '(:eval (if buffer-read-only
+;;                                          (if (zerodark--active-window-p)
+;;                                              (progn
+;;                                                (propertize "RO " 'face 'zerodark-ro-face))
+;;                                            (propertize "RO " 'face 'bold))
+;;                                        "")))
+
 (defvar zerodark-modeline-ro '(:eval (if buffer-read-only
-                                         (if (zerodark--active-window-p)
-                                             (progn
-                                               (propertize "RO " 'face 'zerodark-ro-face))
-                                           (propertize "RO " 'face 'bold))
-                                       "")))
+                                         (all-the-icons-faicon "lock"
+                                                               :height 0.9
+                                                               :v-adjust -0.05
+                                                               :face (if (zerodark--active-window-p)
+                                                                         'zerodark-ro-face
+                                                                             'mode-line-inactive))
+                                       (all-the-icons-faicon "unlock"
+                                                             :height 1.1
+                                                             :v-adjust -0.05
+                                                             :face (if (zerodark--active-window-p)
+                                                                       'mode-line
+                                                                     'mode-line-inactive)))))
 
 (defvar zerodark-buffer-coding '(:eval (unless (eq buffer-file-coding-system (default-value 'buffer-file-coding-system))
                                          mode-line-mule-info)))
 
-(defvar zerodark-modeline-vc '(vc-mode ("   "
+(defvar zerodark-modeline-vc '(vc-mode (""
                                         (:eval (all-the-icons-faicon "code-fork"
                                                                      :height 0.9
                                                                      :v-adjust 0
@@ -179,6 +193,7 @@
 
 (defun zerodark--git-face-intern ()
   "Return the face to use based on the current repository status."
+  (require 'magit)
   (if (magit-git-success "diff" "--quiet")
       ;; nothing to commit because nothing changed
       (if (zerop (length (magit-git-string
@@ -226,6 +241,7 @@ The result is cached for one second to avoid hiccups."
       (orange (if (true-color-p) "#da8548" "#d7875f"))
       (orange-light (if (true-color-p) "#ddbd78" "#d7af87"))
       (red (if (true-color-p) "#ff6c6b" "#ff5f5f"))
+      (pink (if (true-color-p) "#E18691" "pink"))
       (purple (if (true-color-p) "#c678dd" "#d787d7"))
       (purple-dark (if (true-color-p) "#64446d" "#5f5f5f"))
       (blue (if (true-color-p) "#61afef" "#5fafff"))

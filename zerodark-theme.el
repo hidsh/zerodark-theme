@@ -110,13 +110,13 @@
 
 (defvar zerodark-modeline-modified '(:eval (if (buffer-modified-p (current-buffer))
                                                (all-the-icons-faicon "pencil"
-                                                                     :height 0.9
+                                                                     ;; :height 0.9
                                                                      :v-adjust -0.05
                                                                      :face (if (zerodark--active-window-p)
                                                                                'zerodark-modified-face
                                                                              'mode-line-inactive))
                                              (all-the-icons-faicon "check"
-                                                                   :height 1.1
+                                                                   ;; :height 0.9
                                                                    :v-adjust -0.05
                                                                    :face (if (zerodark--active-window-p)
                                                                              'mode-line
@@ -131,13 +131,13 @@
 
 (defvar zerodark-modeline-ro '(:eval (if buffer-read-only
                                          (all-the-icons-faicon "lock"
-                                                               :height 0.9
+                                                               ;; :height 0.9
                                                                :v-adjust -0.05
                                                                :face (if (zerodark--active-window-p)
                                                                          'zerodark-ro-face
                                                                              'mode-line-inactive))
                                        (all-the-icons-faicon "unlock"
-                                                             :height 1.1
+                                                             ;; :height 0.9
                                                              :v-adjust -0.05
                                                              :face (if (zerodark--active-window-p)
                                                                        'mode-line
@@ -148,7 +148,7 @@
 
 (defvar zerodark-modeline-vc '(vc-mode (""
                                         (:eval (all-the-icons-faicon "code-fork"
-                                                                     :height 0.9
+                                                                     ;; :height 0.9
                                                                      :v-adjust 0
                                                                      :face (when (zerodark--active-window-p)
                                                                              (zerodark-git-face))))
@@ -250,7 +250,8 @@ The result is cached for one second to avoid hiccups."
       (green-light (if (true-color-p) "#9eac8c" "#afaf87"))
       (peach "PeachPuff3")
       ;; (turquoise "#38C4B6")
-      (turquoise "#3EA399")
+      ;; (turquoise "#3EA399")
+      (turquoise "#B5A458")
       (turquoise2 "#68AAAB")
       (turquoise-dark "#325152")
       ;; (turquoise-dark "#2B877E")

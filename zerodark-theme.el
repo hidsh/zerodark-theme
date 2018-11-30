@@ -248,6 +248,7 @@ The result is cached for one second to avoid hiccups."
       (blue-dark (if (true-color-p) "#1f5582" "#005f87"))
       (green (if (true-color-p) "#98be65" "#87af5f"))
       (green-light (if (true-color-p) "#9eac8c" "#afaf87"))
+      (vanilla "#D7C9AA")
       (peach "PeachPuff3")
       ;; (turquoise "#38C4B6")
       ;; (turquoise "#3EA399")
@@ -291,7 +292,7 @@ The result is cached for one second to avoid hiccups."
    `(font-lock-type-face ((,class (:foreground ,green))))
    `(font-lock-variable-name-face ((,class (:foreground ,blue))))
    ;; `(font-lock-preprocessor-face ((,class (:foreground ,blue :background ,background-blue))))
-   `(font-lock-preprocessor-face ((,class (:foreground ,orange :weight bold))))
+   `(font-lock-preprocessor-face ((,class (:foreground ,vanilla :weight bold))))
    `(font-lock-negation-char-face ((,class (:foreground ,blue :weight bold))))
    `(font-lock-warning-face ((,class (:foreground ,red :weight bold :background ,background-red))))
 

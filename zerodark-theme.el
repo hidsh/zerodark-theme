@@ -136,7 +136,7 @@
                                                                :face (if (zerodark--active-window-p)
                                                                          'zerodark-ro-face
                                                                              'mode-line-inactive))
-                                       (all-the-icons-faicon "unlock"
+                                       (all-the-icons-faicon "unlock-alt"
                                                              ;; :height 0.9
                                                              :v-adjust -0.05
                                                              :face (if (zerodark--active-window-p)
@@ -598,16 +598,16 @@ The result is cached for one second to avoid hiccups."
 
    ;; ivy
    ;; `(ivy-current-match ((,class (:background ,background-purple :weight bold :foreground ,purple))))
-   `(ivy-current-match ((,class (:background ,blue-dark :weight bold))))
+   `(ivy-current-match ((,class (:background ,blue :foreground ,background :weight normal))))
    ;; `(ivy-minibuffer-match-face-1 ((,class (:foreground ,orange))))
-   `(ivy-minibuffer-match-face-1 ((,class (:background ,turquoise-dark :weight bold))))
-   `(ivy-minibuffer-match-face-2 ((,class (:background ,turquoise-dark :weight bold))))
-   `(ivy-minibuffer-match-face-3 ((,class (:background ,turquoise-dark :weight bold))))
-   `(ivy-minibuffer-match-face-4 ((,class (:background ,turquoise-dark :weight bold))))
-   `(ivy-match-required-face ((,class (:foreground ,red :background ,background-red :weight bold))))
+   `(ivy-minibuffer-match-face-1 ((,class (:foreground "#ff6c6b" ))))
+   `(ivy-minibuffer-match-face-2 ((,class (:foreground "#ff6c6b" ))))
+   `(ivy-minibuffer-match-face-3 ((,class (:foreground "#ff6c6b" ))))
+   `(ivy-minibuffer-match-face-4 ((,class (:foreground "#ff6c6b" ))))
+   `(ivy-match-required-face ((,class (:foreground ,red :background ,background-red :weight normal))))
    `(ivy-modified-buffer ((,class (:foreground ,red))))
    `(ivy-remote ((,class (:foreground ,blue))))
-   `(ivy-highlight-face ((,class (:foreground ,blue :weight bold))))
+   `(ivy-highlight-face ((,class (:foreground ,blue :weight normal))))
 
    ;; helm
    `(helm-candidate-number ((,class (:weight normal))))
@@ -888,7 +888,8 @@ The result is cached for one second to avoid hiccups."
                      "")
                   "  "
                   (:eval (zerodark-modeline-flycheck-status))
-                  "  " mode-line-modes mode-line-misc-info mode-line-end-spaces
+                  ;; "  " mode-line-modes mode-line-misc-info mode-line-end-spaces
+                  "  " mode-line-modes mode-line-misc-info
                   )))
 
 ;;;###autoload

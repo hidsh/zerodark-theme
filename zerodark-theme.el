@@ -69,11 +69,11 @@
                  (const :tag "Do not display any version control information" nil)))
 
 (defface zerodark-ro-face
-  '((t :foreground "#ff6c6b" :weight bold))
+  '((t :foreground "#ff6c6b" :weight bold :weight bold))
   "Face for read-only buffer in the mode-line.")
 
 (defface zerodark-modified-face
-  '((t :foreground "#ff6c6b" :height 0.9))
+  '((t :foreground "#ff6c6b" :weight bold :height 0.9))
   "Face for modified buffers in the mode-line.")
 
 (defface zerodark-not-modified-face
@@ -97,7 +97,7 @@
   "Face for warning status in the mode-line.")
 
 (defface zerodark-error-face
-  '((t :foreground "#ff6c6b"))
+  '((t :foreground "#ff6c6b" :weight bold))
   "Face for error status in the mode-line.")
 
 (defvar zerodark-modeline-position '(:eval (propertize ":%l:%c %p " 'face (if (zerodark--active-window-p)
@@ -240,7 +240,7 @@ The result is cached for one second to avoid hiccups."
       (comment (if (true-color-p) "#788194" "#707070"))
       (orange (if (true-color-p) "#da8548" "#d7875f"))
       (orange-light (if (true-color-p) "#ddbd78" "#d7af87"))
-      (red (if (true-color-p) "#ff6c6b" "#ff5f5f"))
+      (red (if (true-color-p) "#ff6c6b" :weight bold "#ff5f5f"))
       (pink (if (true-color-p) "#E18691" "pink"))
       (purple (if (true-color-p) "#c678dd" "#d787d7"))
       (purple-dark (if (true-color-p) "#64446d" "#5f5f5f"))
@@ -272,7 +272,7 @@ The result is cached for one second to avoid hiccups."
    `(border ((,class (:foreground ,background-lighter))))
    `(vertical-border ((,class (:foreground ,background-lighter))))
    `(highlight ((,class (:background ,grey :foreground ,background :underline nil))))
-   `(region ((,class (:background ,grey-dark :foreground ,background))))
+   `(region ((,class (:background ,grey :foreground ,background))))
    `(secondary-selection ((,class (:background ,highlight :foreground ,default))))
    `(isearch ((,class (:background ,orange-light :foreground ,highlight :undlerline nil))))
    `(lazy-highlight ((,class (:background ,grey-dark :foreground ,orange-light :underline nil))))

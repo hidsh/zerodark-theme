@@ -217,10 +217,10 @@ The result is cached for one second to avoid hiccups."
       ;; (default (if (true-color-p) "#abb2bf" "#afafaf"))
       (default (if (true-color-p) "#B7BECC" "#afafaf"))
       (light (if (true-color-p) "#ccd4e3" "#d7d7d7"))
-      (background (if (true-color-p) "#282c34" "#333333"))
+      (background (if (true-color-p) "#1c2129" "#111111"))
       (background-dark (if (true-color-p) "#24282f" "#222222"))
       (background-darker (if (true-color-p) "#22252c" "#222222"))
-      (mode-line-inactive (if "#1c2129" "#222222"))
+      (mode-line-inactive (if (true-color-p) "#1c2129" "#111111"))
       (mode-line-active (if (true-color-p) "#6f337e" "#875f87"))
       (background-lighter (if (true-color-p) "#3a3f4b" "#5f5f5f"))
       (background-red (if (true-color-p) "#4c3840" "#5f5f5f"))
@@ -265,14 +265,14 @@ The result is cached for one second to avoid hiccups."
   (custom-theme-set-faces
    'zerodark
    `(default ((,class (:background ,background :foreground ,default))))
-   `(cursor ((,class (:background ,default))))
+   `(cursor ((,class (:background ,default :foreground ,background))))
 
    ;; Highlighting faces
    `(fringe ((,class (:background ,background-dark :foreground ,comment))))
    `(border ((,class (:foreground ,background-lighter))))
    `(vertical-border ((,class (:foreground ,background-lighter))))
-   `(highlight ((,class (:background ,highlight :foreground ,default :underline nil))))
-   `(region ((,class (:background ,highlight))))
+   `(highlight ((,class (:background ,grey :foreground ,background :underline nil))))
+   `(region ((,class (:background ,grey-dark :foreground ,background))))
    `(secondary-selection ((,class (:background ,highlight :foreground ,default))))
    `(isearch ((,class (:background ,orange-light :foreground ,highlight :undlerline nil))))
    `(lazy-highlight ((,class (:background ,grey-dark :foreground ,orange-light :underline nil))))
